@@ -20,18 +20,16 @@
   font-weight: 500;
   font-style: normal; }
 * {
-  font-family: 'Gilroy'; }
+  font-family: 'Gilroy';
+  color: #383334; }
 
 body {
   background: #F3F6FA;
   height: 100%; }
 
 .wrapper {
-  height: 100%;
-  overflow: hidden; }
-
-.page {
   min-height: 100%;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,8 +40,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.page {
+  min-height: 100%; }
+
 .container {
-  padding: 60px 130px;
+  padding: 30px 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,6 +59,15 @@ body {
       -ms-flex: 0 0 36%;
           flex: 0 0 36%;
   margin: 0 20px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden; }
   .image img {
     width: 100%;
@@ -67,5 +77,219 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 64%;
           flex: 0 0 64%; }
+  .content__title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 59px; }
+    .content__title span {
+      font-weight: bold;
+      font-size: 70px;
+      color: #FC2763;
+      margin: 0 0 40px 0; }
+  .content__list {
+    list-style-type: none;
+    counter-reset: number;
+    padding: 0;
+    margin: 0 0 38px 0; }
+  .content__li {
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 0 0 40px;
+    margin: 0 0 30px 0;
+    position: relative; }
+    .content__li span {
+      font-weight: bold; }
+    .content__li::before {
+      content: counter(number);
+      counter-increment: number;
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 42px;
+      color: #FC2763;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+  .content__discount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #D0D6DE;
+    border-bottom: 1px solid #D0D6DE; }
+  .content__number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 30px 0; }
+    .content__number span {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 70px;
+      height: 70px;
+      font-weight: 300;
+      font-size: 48px;
+      line-height: 55px;
+      color: #FC2763;
+      border: 2px solid #FC2763;
+      border-radius: 6px;
+      margin: 0 30px 0 0; }
+    .content__number p {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 18px; }
+  .content__bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .content__buttons {
+    height: 70px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 72%;
+            flex: 0 1 72%;
+    border: 2px solid #FC2763;
+    border-radius: 100px;
+    position: relative;
+    padding: 0;
+    margin: 0 20px 0 0; }
+  .content__call {
+    color: #383334;
+    font-size: 18px;
+    line-height: 21px; }
+    .content__call span {
+      color: #8D97A4; }
+
+.discount__price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 36%;
+          flex: 0 0 36%;
+  padding: 20px 20px 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative; }
+  .discount__price::after {
+    content: '';
+    width: 1px;
+    height: 51%;
+    background: #D0D6DE;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%); }
+  .discount__price p {
+    margin: 0; }
+.discount__now {
+  padding: 20px 0 20px 20px;
+  font-size: 15px;
+  line-height: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.price__number {
+  margin: 0 20px 0 0; }
+.price__text {
+  font-size: 15px;
+  line-height: 17px;
+  color: #8D97A4; }
+
+.number__old {
+  margin: 0 0 5px 0; }
+  .number__old span {
+    font-size: 16px;
+    padding: 0;
+    position: relative; }
+    .number__old span::after {
+      content: '';
+      width: 105%;
+      height: 1px;
+      background: #FC2763;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      -webkit-transform: rotate(15deg);
+              transform: rotate(15deg);
+      z-index: 1; }
+.number__new {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px; }
+  .number__new span {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FC2763; }
+
+.now__text {
+  max-width: 319px;
+  margin: 0 20px; }
+  .now__text span {
+    font-weight: bold; }
+.now__image {
+  overflow: hidden;
+  height: auto; }
+  .now__image:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 58px;
+            flex: 0 1 58px; }
+  .now__image:last-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 34px;
+            flex: 0 1 34px; }
+  .now__image img {
+    width: 100%;
+    height: auto; }
+
+.btn {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  top: 0;
+  padding: 0;
+  z-index: 1;
+  -webkit-transition: all .1s ease-in 0s;
+  transition: all .1s ease-in 0s; }
+  .btn:hover {
+    width: 100%;
+    z-index: 2; }
+  .btn_buy {
+    color: #FFFFFF;
+    background: #FC2763;
+    left: 0; }
+  .btn_write {
+    color: #383334;
+    background: #F3F6FA;
+    right: 0; }
 
 /*# sourceMappingURL=style.css.map */
