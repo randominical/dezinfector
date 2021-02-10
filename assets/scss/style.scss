@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.woff2') format('woff2'),
+        url('../fonts/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Bold.woff2') format('woff2'),
+        url('../fonts/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.woff2') format('woff2'),
+        url('../fonts/Gilroy-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+        url('../fonts/Gilroy-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@import '../css/normalize.css';
+
+* {
+    font-family: 'Gilroy';
+}
+
+body {
+    background: #F3F6FA;
+    height: 100%;
+}
+.wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+.page {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    padding: 60px 130px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.image {
+    flex: 0 0 36%;
+    margin: 0 20px 0 0;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.content {
+    flex: 0 0 64%;
+}
