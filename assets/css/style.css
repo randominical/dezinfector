@@ -1,24 +1,30 @@
 @import url(../css/normalize.css);
 @font-face {
   font-family: 'Gilroy';
-  src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+  src: url("../fonts/Gilroy/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Gilroy';
-  src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  src: url("../fonts/Gilroy/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
 @font-face {
   font-family: 'Gilroy';
-  src: url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
+  src: url("../fonts/Gilroy/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 @font-face {
   font-family: 'Gilroy';
-  src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+  src: url("../fonts/Gilroy/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy/Gilroy-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/Icomoon/icomoon.woff") format("woff"), url("../fonts/Icomoon/icomoon.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
 * {
   font-family: 'Gilroy';
   color: #383334; }
@@ -353,5 +359,23 @@ body {
     color: #383334;
     background: #F3F6FA;
     right: 0; }
+
+.icon-wallet:before {
+  content: "\e903"; }
+
+.icon-spoon:before {
+  content: "\e904"; }
+
+.icon-paper-bag:before {
+  content: "\e905"; }
+
+.icon-door-handle:before {
+  content: "\e906"; }
+
+.icon-cosmetics:before {
+  content: "\e907"; }
+
+.icon-baby-bottle:before {
+  content: "\e908"; }
 
 /*# sourceMappingURL=style.css.map */
