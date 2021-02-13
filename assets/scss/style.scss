@@ -54,27 +54,37 @@ body {
     height: 100%;
 }
 .wrapper {
-    max-width: 1230px;
     min-height: 100%;
-    margin: 0 auto;
-    padding: 0 0 100px 0;
-    overflow: hidden;
-    position: relative;
 }
 .page {
-    min-height: 100%;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.page__wrapper {
     display: flex;
-    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+.section {
+    flex: 1 0 100%;
+    position: relative;
 }
 .container {
     width: 100%;
     max-width: 1230px;
     padding: 0 20px;
+    margin: 0 auto;
     display: flex;
+    position: relative;
+    z-index: 2;
 }
 //==================================================
 .top {
-    min-height: 100vh;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -393,7 +403,6 @@ body {
 }
 //==================================================
 .disinfect {
-    min-height: 100vh;
     padding: 50px 0 30px 0;
     display: flex;
     align-items: center;
@@ -478,7 +487,6 @@ body {
 }
 //==================================================
 .specifications {
-    min-height: 100vh;
     padding: 50px 0 30px 0;
     display: flex;
     align-items: center;

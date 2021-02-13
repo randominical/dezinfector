@@ -37,33 +37,41 @@ body {
   height: 100%; }
 
 .wrapper {
-  max-width: 1230px;
-  min-height: 100%;
-  margin: 0 auto;
-  padding: 0 0 100px 0;
-  overflow: hidden;
-  position: relative; }
+  min-height: 100%; }
 
 .page {
-  min-height: 100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden; }
+
+.page__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  width: 100%;
+  height: 100%; }
+
+.section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  position: relative; }
 
 .container {
   width: 100%;
   max-width: 1230px;
   padding: 0 20px;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  position: relative;
+  z-index: 2; }
 
 .top {
-  min-height: 100vh;
   padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,7 +380,6 @@ body {
     right: 0; }
 
 .disinfect {
-  min-height: 100vh;
   padding: 50px 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,7 +463,6 @@ body {
   content: "\e908"; }
 
 .specifications {
-  min-height: 100vh;
   padding: 50px 0 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
