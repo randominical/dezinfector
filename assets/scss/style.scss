@@ -205,8 +205,36 @@ body {
             background: #DAE2ED;
         }
     }
+    &__contacts {
+        display: flex;
+    }
+    &__email, &__address, &__documents, &__policy, &__personal {
+        font-style: normal;
+        font-size: 15px;
+        line-height: 17px;
+        color: #8D97A4;
+    }
+    &__email {
+        margin: 0 24px 0 0;
+    }
+    &__policy, &__personal {
+        position: relative;
+        &:before {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #8D97A4;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
     @media (max-height: 725px) {
-        padding: 20px 0 18px 0;
+        padding: 15px 0 18px 0;
+        &__body {
+            grid-template-rows: 50px 17px;
+            row-gap: 10px;
+        }
     }
 }
 //==================================================
@@ -448,7 +476,7 @@ body {
 }
 //==================================================
 .disinfect {
-    padding: 50px 0 30px 0;
+    padding: 30px 0 211px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -473,6 +501,7 @@ body {
         justify-content: space-between;
     }
     @media (max-height: 725px) {
+        padding: 20px 0 135px 0;
         &__title {
             font-size: 40px;
             line-height: 50px;
