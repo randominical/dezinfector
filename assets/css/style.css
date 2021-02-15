@@ -73,7 +73,6 @@ body {
 .container {
   width: 100%;
   max-width: 1230px;
-  height: 100%;
   padding: 0 20px;
   margin: 0 auto;
   display: -webkit-box;
@@ -412,6 +411,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .top .container {
+    position: relative; }
+  .top__virus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
   .top__image {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 36%;
@@ -434,6 +441,73 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 64%;
             flex: 0 0 64%; }
+
+.virus__image {
+  position: absolute;
+  overflow: hidden; }
+  .virus__image img {
+    width: 100%;
+    height: 100%; }
+  .virus__image:first-child {
+    width: 50px;
+    height: 48px;
+    top: 5%;
+    left: 3%; }
+  .virus__image:nth-child(2) {
+    width: 54px;
+    height: 54px;
+    top: 68%;
+    left: 8%;
+    z-index: -1; }
+  .virus__image:nth-child(3) {
+    width: 50px;
+    height: 48px;
+    top: 30%;
+    right: 0%; }
+  .virus__image:nth-child(4) {
+    width: 36px;
+    height: 35px;
+    top: 94%;
+    left: 20%; }
+  .virus__image:nth-child(5) {
+    width: 28px;
+    height: 27px;
+    top: 6%;
+    left: 38%;
+    z-index: 3; }
+  .virus__image:nth-child(6) {
+    width: 87px;
+    height: 83px;
+    top: 95%;
+    left: 57%;
+    z-index: 3; }
+  .virus__image:nth-child(7) {
+    width: 114px;
+    height: 109px;
+    top: 42%;
+    left: 18%;
+    z-index: -1; }
+  .virus__image:nth-child(8) {
+    width: 47px;
+    height: 45px;
+    top: 28%;
+    left: 49%;
+    z-index: -1; }
+  .virus__image:nth-child(9) {
+    width: 20px;
+    height: 20px;
+    top: 2%;
+    right: 12%; }
+  .virus__image:nth-child(10) {
+    width: 50px;
+    height: 48px;
+    top: 69%;
+    right: 18%; }
+@media (max-height: 900px) {
+  .virus__image:nth-child(6) {
+    width: 50px;
+    height: 48px;
+    top: 92%; } }
 
 .body-top__title {
   font-weight: 500;
