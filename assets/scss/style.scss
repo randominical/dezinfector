@@ -340,13 +340,36 @@ body {
         border-radius: 100px;
         font-weight: bold;
         font-size: 15px;
-        line-height: 18px;
         color: #383334;
         transition: background .2s ease-in 0s, color .2s ease-in 0s;
         &:hover {
             background: #941237;
             color: white;
         }       
+    }
+    @media (max-height: 900px) {
+        &__body {
+            width: 600px;
+            padding: 30px 70px 40px 70px;
+        }
+        &__title {
+            font-size: 30px;
+            line-height: 35px;
+            margin: 0 0 20px 0;
+        }
+        &__items {
+            padding: 30px 50px 30px 50px;
+            margin: 0 0 20px 0;
+        }
+        &__input {
+            font-size: 14px;
+            line-height: 16px;
+        }
+        &__button {
+            width: 230px;
+            height: 50px;
+            font-size: 14px;     
+        }
     }
 }
 //==================================================
