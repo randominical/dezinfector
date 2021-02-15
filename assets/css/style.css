@@ -95,7 +95,6 @@ body {
     height: 70px;
     font-weight: 300;
     font-size: 48px;
-    color: #FC2763;
     border: 2px solid #FC2763;
     border-radius: 6px;
     margin: 0 30px 0 0; }
@@ -232,6 +231,9 @@ body {
         grid-template-rows: 50px 17px;
         row-gap: 10px; } }
 
+.pink {
+  color: #FC2763; }
+
 .top {
   padding: 30px 0;
   display: -webkit-box;
@@ -273,7 +275,6 @@ body {
   .body-top__title span {
     font-weight: bold;
     font-size: 70px;
-    color: #FC2763;
     margin: 0 0 40px 0; }
 .body-top__list {
   list-style-type: none;
@@ -419,8 +420,7 @@ body {
   .value-price__new span {
     font-weight: bold;
     font-size: 28px;
-    line-height: 34px;
-    color: #FC2763; }
+    line-height: 34px; }
 @media (max-height: 725px) {
   .value-price__old span {
     font-size: 14px; }
@@ -513,7 +513,6 @@ body {
   font-weight: bold;
   font-size: 28px;
   line-height: 34px;
-  color: #FC2763;
   margin: 0 0 10px 0; }
 .item__text {
   font-size: 15px;
@@ -645,8 +644,7 @@ body {
           align-items: end;
   position: relative; }
   .comment__p span {
-    font-weight: bold;
-    color: #FC2763; }
+    font-weight: bold; }
   .comment__p:before {
     content: '';
     width: 60px;

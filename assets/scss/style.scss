@@ -95,7 +95,6 @@ body {
         height: 70px;
         font-weight: 300;
         font-size: 48px;
-        color: #FC2763;
         border: 2px solid #FC2763;
         border-radius: 6px;
         margin: 0 30px 0 0;
@@ -237,6 +236,9 @@ body {
         }
     }
 }
+.pink {
+    color: #FC2763;
+}
 //==================================================
 .top {
     padding: 30px 0;
@@ -267,7 +269,6 @@ body {
         span {
             font-weight: bold;
             font-size: 70px;
-            color: #FC2763;
             margin: 0 0 40px 0;
         }
     }
@@ -427,7 +428,6 @@ body {
             font-weight: bold;
             font-size: 28px;
             line-height: 34px;
-            color: #FC2763;
         }
     }
     @media (max-height: 725px) {
@@ -530,7 +530,6 @@ body {
         font-weight: bold;
         font-size: 28px;
         line-height: 34px;
-        color: #FC2763;
         margin: 0 0 10px 0;
     }
     &__text {
@@ -666,7 +665,6 @@ body {
         position: relative;
         span {
             font-weight: bold;
-            color: #FC2763;
         }
         &:before {
             content: '';
