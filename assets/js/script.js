@@ -1,3 +1,4 @@
+//swiper
 let wrapper = document.querySelector('.wrapper');
 
 let pageSlider = new Swiper('.page', {
@@ -20,3 +21,21 @@ let pageSlider = new Swiper('.page', {
     observeParents: true,
     observeSlideChildren: true,
 });
+//form
+let form = document.querySelector('.form');
+let formCover = document.querySelector('.form__cover');
+let formClose = document.querySelector('.form__exit');
+const formOpeners = document.querySelectorAll(".btn_buy");
+
+for (const formOpener of formOpeners) {
+    formOpener.addEventListener('click', function(event) {
+        form.classList.add('active');
+  })
+};
+
+formClose.onclick = function() {
+    form.classList.remove('active');
+};
+formCover.onclick = function() {
+    form.classList.remove('active');
+};
