@@ -210,6 +210,9 @@ body {
         flex: 0 0 auto;
     }
     .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &_write {
             background: #DAE2ED;
         }
@@ -462,6 +465,9 @@ body {
         flex: 0 1 72%;
         margin: 0 20px 0 0;
         .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &_write {
                 background: #F3F6FA;
             }
