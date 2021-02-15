@@ -256,6 +256,100 @@ body {
     color: #8D97A4;
 }
 //==================================================
+.form {
+    background: rgba(255, 255, 255, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    &__body {
+        width: 680px;
+        background: #FC2763;
+        padding: 60px 100px 60px 100px;
+        border-radius: 6px;
+        position: relative;
+    }
+    &__exit {
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+        &:before, &:after {
+            content: '';
+            width: 36px;
+            height: 3px;
+            background: #DF1F55;
+            position: absolute;
+            top: 18px;
+        }
+        &:before {
+            left: 0;
+            transform: rotate(45deg);
+        }
+        &:after {
+            right: 0;
+            transform: rotate(-45deg);
+        }
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 60px;
+        color: #FFFFFF;
+        margin: 0 0 30px 0;
+    }
+    &__items {
+        padding: 50px 50px 50px 50px;
+        background: #DF1F55;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 30px 0;
+    }
+    &__input {
+        width: 100%;
+        color: #FFFFFF;
+        font-size: 15px;
+        line-height: 17px;
+        background: transparent;
+        padding: 3px 1px 15px 1px;
+        border: none;
+        border-bottom: 1px solid white;
+        &::placeholder {
+            color: #FFFFFF;
+        }
+        &:-webkit-autofill, &:focus:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 100px #DF1F55 inset;
+            -webkit-text-fill-color: white;
+        }
+        &:first-child {
+            margin: 0 0 34px 0;
+        }
+    }
+    &__button {
+        width: 280px;
+        height: 70px;
+        background: #FFEEF3;
+        border-radius: 100px;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        color: #383334;
+        transition: background .2s ease-in 0s, color .2s ease-in 0s;
+        &:hover {
+            background: #941237;
+            color: white;
+        }       
+    }
+}
+//==================================================
 .top {
     padding: 30px 0;
     display: flex;
