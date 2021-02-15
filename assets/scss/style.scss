@@ -68,17 +68,23 @@ body {
     display: flex;
     width: 100%;
     height: 100%;
+    min-height: 600px;
 }
 .section {
     flex: 1 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
 }
 .container {
     width: 100%;
     max-width: 1230px;
+    height: 100%;
     padding: 0 20px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     z-index: 2;
 }
 //==================================================
@@ -86,7 +92,7 @@ body {
     font-weight: bold;
     font-size: 50px;
     line-height: 60px;
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         font-size: 30px;
         line-height: 40px;
     }
@@ -115,7 +121,7 @@ body {
         line-height: 18px;
         margin: 0;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         padding: 20px 0;
         span {
             width: 40px;
@@ -134,7 +140,7 @@ body {
     position: relative;
     padding: 0;
     height: 70px;
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         height: 50px;
     }
 }
@@ -167,7 +173,7 @@ body {
 .call {
     font-size: 18px;
     line-height: 21px;
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         font-size: 16px;
         line-height: 19px;
     }
@@ -231,11 +237,15 @@ body {
             bottom: 0;
         }
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         padding: 15px 0 18px 0;
         &__body {
             grid-template-rows: 50px 17px;
             row-gap: 10px;
+        }
+        &__email, &__address, &__documents, &__policy, &__personal {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 }
@@ -325,7 +335,7 @@ body {
             }
         }
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__title {
             font-size: 36px;
             line-height: 42px;
@@ -376,7 +386,7 @@ body {
         display: flex;
         align-items: center;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__price {
             padding: 15px 15px 15px 0;
         }
@@ -395,7 +405,7 @@ body {
         font-size: 15px;
         line-height: 17px;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__number {
             margin: 0 15px 0 0;
         }
@@ -435,7 +445,7 @@ body {
             line-height: 34px;
         }
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__old { 
             span {
                 font-size: 14px;
@@ -473,7 +483,7 @@ body {
             height: auto;
         }
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__text {
             margin: 0 15px;
         }
@@ -482,13 +492,12 @@ body {
 //==================================================
 .disinfect {
     padding: 30px 0 211px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     .container {
         flex-direction: column;
+        justify-content: center;
     }
     &__title {
+        align-self: flex-start;
         margin: 0 0 39px 0;
     }
     &__content {
@@ -501,7 +510,7 @@ body {
         align-content: space-between;
         justify-content: space-between;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         padding: 20px 0 135px 0;
         &__title {
             margin: 0 0 29px 0;
@@ -523,6 +532,14 @@ body {
             left: 0;
         }
     }
+    @media (max-height: 900px) {
+        &__item {
+            padding: 0 20px 0 55px;
+            &::before {
+                font-size: 35px;
+            }
+        }
+    }
 }
 .item {
     &__title {
@@ -535,6 +552,17 @@ body {
         font-size: 15px;
         line-height: 17px;
         margin: 0;
+    }
+    @media (max-height: 900px) {
+        &__title {
+            font-size: 22px;
+            line-height: 28px;
+            //margin: 0 0 10px 0;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 16px;
+        }
     }
 }
 
@@ -558,12 +586,9 @@ body {
 }
 //==================================================
 .specifications {
-    padding: 50px 0 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 50px 0 230px 0;
     &__body {
-        flex: 0 0 60%;
+        flex: 1 0 auto;
         margin: 0 50px 0 0;
         display: grid;
         grid-template-rows: 140px 1fr;
@@ -573,9 +598,10 @@ body {
         flex: 0 0 40%;
         display: flex;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
+        padding: 20px 0 135px 0;
         &__body {
-            grid-template-rows: 120px 1fr;
+            grid-template-rows: 100px 1fr;
             row-gap: 20px;
         }
     }
@@ -594,7 +620,7 @@ body {
         align-content: space-between;
         justify-content: space-between;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__title {
             margin: 10px 0 0 0;
         }
@@ -614,7 +640,7 @@ body {
         line-height: 21px;
         margin: 0;
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__head {
             font-size: 14px;
             line-height: 16px;
@@ -642,6 +668,11 @@ body {
         grid-template-rows: 1fr 1fr 1fr;
         padding-bottom: 70px;
     }
+    @media (max-height: 900px) {
+        &__image {
+            flex: 0 1 130px;
+        }
+    }
 }
 .comment {
     &__p {
@@ -665,7 +696,7 @@ body {
             background: url('../img/line.svg') 0 0 / cover no-repeat;
         }
     }
-    @media (max-height: 725px) {
+    @media (max-height: 900px) {
         &__p {
             font-size: 14px;
             line-height: 16px;
