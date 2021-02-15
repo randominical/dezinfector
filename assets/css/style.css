@@ -149,11 +149,9 @@ body {
     background: #FC2763;
     left: 0; }
   .btn_write {
-    color: #383334;
     right: 0; }
 
 .call {
-  color: #383334;
   font-size: 18px;
   line-height: 21px; }
   @media (max-height: 725px) {
@@ -473,7 +471,6 @@ body {
     font-weight: bold;
     font-size: 50px;
     line-height: 60px;
-    color: #383334;
     margin: 0 0 39px 0; }
   .disinfect__content {
     width: 100%;
@@ -516,7 +513,6 @@ body {
 .item__text {
   font-size: 15px;
   line-height: 17px;
-  color: #383334;
   margin: 0; }
 
 .icon-wallet:before {
@@ -572,7 +568,6 @@ body {
   font-weight: bold;
   font-size: 50px;
   line-height: 60px;
-  color: #383334;
   margin: 20px 0 0 0; }
 .body-specifications__box {
   width: 100%;
@@ -602,7 +597,6 @@ body {
 .feature__value {
   font-size: 18px;
   line-height: 21px;
-  color: #383334;
   margin: 0; }
 @media (max-height: 725px) {
   .feature__head {
@@ -633,7 +627,6 @@ body {
 .comment__p {
   font-size: 15px;
   line-height: 18px;
-  color: #383334;
   margin: 0;
   display: grid;
   grid-template: 1fr / 1fr;

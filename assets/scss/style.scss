@@ -152,12 +152,10 @@ body {
         left: 0;
     }
     &_write {
-        color: #383334;
         right: 0;
     }
 }
 .call {
-    color: #383334;
     font-size: 18px;
     line-height: 21px;
     @media (max-height: 725px) {
@@ -485,7 +483,6 @@ body {
         font-weight: bold;
         font-size: 50px;
         line-height: 60px;
-        color: #383334;
         margin: 0 0 39px 0;
     }
     &__content {
@@ -533,7 +530,6 @@ body {
     &__text {
         font-size: 15px;
         line-height: 17px;
-        color: #383334;
         margin: 0;
     }
 }
@@ -585,7 +581,6 @@ body {
         font-weight: bold;
         font-size: 50px;
         line-height: 60px;
-        color: #383334;
         margin: 20px 0 0 0;      
     }
     &__box {
@@ -618,7 +613,6 @@ body {
     &__value {
         font-size: 18px;
         line-height: 21px;
-        color: #383334;
         margin: 0;
     }
     @media (max-height: 725px) {
@@ -654,7 +648,6 @@ body {
     &__p {
         font-size: 15px;
         line-height: 18px;
-        color: #383334;
         margin: 0;
         display: grid;
         grid-template: 1fr / 1fr;
