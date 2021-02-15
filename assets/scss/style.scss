@@ -434,6 +434,7 @@ body {
             height: 48px;
             top: 5%;
             left: 3%;
+            animation: virus_1 5s linear;
         }
         &:nth-child(2) {
             width: 54px;
@@ -447,12 +448,14 @@ body {
             height: 48px;
             top: 30%;
             right: 0%;
+            animation: virus_2 5s linear;
         }
         &:nth-child(4) {
             width: 36px;
             height: 35px;
             top: 94%;
             left: 20%;
+            animation: virus_2 5s linear;
         }
         &:nth-child(5) {
             width: 28px;
@@ -935,3 +938,63 @@ body {
     }
 }
 //==================================================
+@keyframes virus_1 {
+    from {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    3% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    6% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    9% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    12% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    15% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    to {
+        transform: translate(-100px, -500px);
+        opacity: 0;
+    }
+}
+@keyframes virus_2 {
+    from {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    3% {
+        transform: translate(0, 3px);
+        opacity: 1;
+    }
+    6% {
+        transform: translate(0, -3px);
+        opacity: 1;
+    }
+    9% {
+        transform: translate(0, 3px);
+        opacity: 1;
+    }
+    12% {
+        transform: translate(0, -3px);
+        opacity: 1;
+    }
+    15% {
+        transform: translate(0, 3ps);
+        opacity: 1;
+    }
+    to {
+        transform: translate(1000px, 150px);
+        opacity: 0;
+    }
+}
