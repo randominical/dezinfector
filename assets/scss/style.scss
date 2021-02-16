@@ -191,7 +191,6 @@ body {
 .call {
     font-size: 18px;
     line-height: 21px;
-    z-index: 1;
     @media (max-height: 900px) {
         font-size: 16px;
         line-height: 19px;
@@ -485,6 +484,12 @@ body {
             left: 0%;
         }
     }
+    @media (max-width: 1100px) {
+        &__light {
+            width: 240px;
+            left: -1%;
+        }
+    }
 }
 .virus {
     &__image {
@@ -667,6 +672,9 @@ body {
             }
         }
     }
+    &__call {
+        z-index: 1;
+    }
     @media (max-height: 900px), (max-width: 1000px) {
         &__title {
             font-size: 36px;
@@ -712,11 +720,12 @@ body {
         }
     }
     @media (max-width: 1135px) {
-        &__bottom {
-            display: block;
-        }
         &__buttons {
+            flex: 0 0 450px;
             margin: 0 0 15px 0;
+        }
+        &__call {
+            display: none;
         }
     }
 }

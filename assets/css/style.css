@@ -193,8 +193,7 @@ body {
 
 .call {
   font-size: 18px;
-  line-height: 21px;
-  z-index: 1; }
+  line-height: 21px; }
   @media (max-height: 900px) {
     .call {
       font-size: 16px;
@@ -499,6 +498,10 @@ body {
     .top__light {
       width: 250px;
       left: 0%; } }
+  @media (max-width: 1100px) {
+    .top__light {
+      width: 240px;
+      left: -1%; } }
 
 .virus__image {
   position: absolute;
@@ -667,6 +670,8 @@ body {
             align-items: center; }
     .body-top__buttons .btn_write {
       background: #F3F6FA; }
+.body-top__call {
+  z-index: 1; }
 @media (max-height: 900px), (max-width: 1000px) {
   .body-top__title {
     font-size: 36px;
@@ -700,10 +705,13 @@ body {
       font-size: 18px;
       line-height: 20px; } }
 @media (max-width: 1135px) {
-  .body-top__bottom {
-    display: block; }
   .body-top__buttons {
-    margin: 0 0 15px 0; } }
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 450px;
+            flex: 0 0 450px;
+    margin: 0 0 15px 0; }
+  .body-top__call {
+    display: none; } }
 
 .discount__price {
   -webkit-box-flex: 0;
