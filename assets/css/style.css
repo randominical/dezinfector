@@ -262,10 +262,10 @@ body {
       padding: 15px 0 18px 0; }
       .footer__body {
         grid-template-rows: 50px 17px;
-        row-gap: 10px; }
+        row-gap: 12px; }
       .footer__email, .footer__address, .footer__documents, .footer__policy, .footer__personal {
-        font-size: 14px;
-        line-height: 16px; } }
+        font-size: 12px;
+        line-height: 14px; } }
 
 .pink {
   color: #FC2763; }
@@ -427,8 +427,8 @@ body {
     height: 100%; }
   .top__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 36%;
-            flex: 0 0 36%;
+        -ms-flex: 0 0 34%;
+            flex: 0 0 34%;
     margin: 0 20px 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
