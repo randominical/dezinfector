@@ -283,11 +283,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 10;
-  -webkit-transform: translate(-100%, -100%);
-          transform: translate(-100%, -100%);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   opacity: 0;
-  -webkit-transition: all .3s linear 0s;
-  transition: all .3s linear 0s; }
+  -webkit-transition: all .4s linear 0s;
+  transition: all .4s linear 0s; }
   .form.active {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
@@ -953,14 +953,14 @@ body {
 @-webkit-keyframes light {
   from {
     background: url("../img/light.png") 75% 50%/0px 100% no-repeat; }
-  50% {
+  70% {
     background: url("../img/light.png") 75% 50%/282px 100% no-repeat; }
   to {
     background: url("../img/light.png") 75% 50%/0px 100% no-repeat; } }
 @keyframes light {
   from {
     background: url("../img/light.png") 75% 50%/0px 100% no-repeat; }
-  50% {
+  70% {
     background: url("../img/light.png") 75% 50%/282px 100% no-repeat; }
   to {
     background: url("../img/light.png") 75% 50%/0px 100% no-repeat; } }
