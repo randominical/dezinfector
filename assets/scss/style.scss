@@ -415,7 +415,18 @@ body {
         img {
             width: 100%;
             height: auto;
+            animation: disinfector 1s linear 0s forwards;
         }
+    }
+    &__light {
+        width: 282px;
+        height: 110vh;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        overflow: hidden;
+        transform: translate(0, -50%);
+        animation: light 5s linear .8s forwards;
     }
     &__body {
         flex: 0 0 64%;
@@ -434,7 +445,7 @@ body {
             height: 48px;
             top: 5%;
             left: 3%;
-            animation: virus_1 5s linear;
+            animation: virus_1 5s linear .1s forwards;
         }
         &:nth-child(2) {
             width: 54px;
@@ -442,20 +453,23 @@ body {
             top: 68%;
             left: 8%;
             z-index: -1;
+            animation: virus_1 5s linear forwards;
         }
         &:nth-child(3) {
             width: 50px;
             height: 48px;
             top: 30%;
             right: 0%;
-            animation: virus_2 5s linear;
+            transform: rotate(45deg);
+            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(4) {
             width: 36px;
             height: 35px;
             top: 94%;
             left: 20%;
-            animation: virus_2 5s linear;
+            transform: rotate(90deg);
+            animation: virus_2 5s linear forwards;
         }
         &:nth-child(5) {
             width: 28px;
@@ -463,6 +477,7 @@ body {
             top: 6%;
             left: 38%;
             z-index: 3;
+            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(6) {
             width: 87px;
@@ -470,6 +485,7 @@ body {
             top: 95%;
             left: 57%;
             z-index: 3;
+            animation: virus_2 5s linear forwards;
         }
         &:nth-child(7) {
             width: 114px;
@@ -477,6 +493,7 @@ body {
             top: 42%;
             left: 18%;
             z-index: -1;
+            animation: virus_1 4s linear.1s forwards;
         }
         &:nth-child(8) {
             width: 47px;
@@ -484,18 +501,21 @@ body {
             top: 28%;
             left: 49%;
             z-index: -1;
+            animation: virus_2 5s linear forwards;
         }
         &:nth-child(9) {
             width: 20px;
             height: 20px;
             top: 2%;
             right: 12%;
+            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(10) {
             width: 50px;
             height: 48px;
             top: 69%;
             right: 18%;
+            animation: virus_2 5s linear forwards;
         }
     }
     @media (max-height: 900px) {
@@ -938,20 +958,47 @@ body {
     }
 }
 //==================================================
+@keyframes disinfector {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
+@keyframes light {
+    from {
+        background: url('../img/light.png') 75% 50% / 0px 100% no-repeat;
+    }
+    50% {
+        background: url('../img/light.png') 75% 50% / 282px 100% no-repeat;
+    }
+    to {
+        background: url('../img/light.png') 75% 50% / 0px 100% no-repeat;
+    }
+}
 @keyframes virus_1 {
     from {
         transform: translate(2px, 0);
         opacity: 1;
     }
-    3% {
+    2% {
         transform: translate(-2px, 0);
         opacity: 1;
     }
-    6% {
+    4% {
         transform: translate(2px, 0);
         opacity: 1;
     }
-    9% {
+    6% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    8% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    10% {
         transform: translate(-2px, 0);
         opacity: 1;
     }
@@ -959,42 +1006,98 @@ body {
         transform: translate(2px, 0);
         opacity: 1;
     }
-    15% {
+    14% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    16% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    18% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    22% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    24% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    26% {
         transform: translate(-2px, 0);
         opacity: 1;
     }
     to {
-        transform: translate(-100px, -500px);
+        transform: translate(-1000px, 0);
         opacity: 0;
     }
 }
 @keyframes virus_2 {
     from {
-        transform: translate(0, 0);
+        transform: translate(2px, 0);
         opacity: 1;
     }
-    3% {
-        transform: translate(0, 3px);
+    2% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    4% {
+        transform: translate(2px, 0);
         opacity: 1;
     }
     6% {
-        transform: translate(0, -3px);
+        transform: translate(-2px, 0);
         opacity: 1;
     }
-    9% {
-        transform: translate(0, 3px);
+    8% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    10% {
+        transform: translate(-2px, 0);
         opacity: 1;
     }
     12% {
-        transform: translate(0, -3px);
+        transform: translate(2px, 0);
         opacity: 1;
     }
-    15% {
-        transform: translate(0, 3ps);
+    14% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    16% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    18% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    22% {
+        transform: translate(-2px, 0);
+        opacity: 1;
+    }
+    24% {
+        transform: translate(2px, 0);
+        opacity: 1;
+    }
+    26% {
+        transform: translate(-2px, 0);
         opacity: 1;
     }
     to {
-        transform: translate(1000px, 150px);
+        transform: translate(1000px, 0);
         opacity: 0;
     }
 }
