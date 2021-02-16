@@ -455,8 +455,8 @@ body {
     height: 100%; }
   .top__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 34%;
-            flex: 0 0 34%;
+        -ms-flex: 0 0 380px;
+            flex: 0 0 380px;
     margin: 0 20px 0 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -467,41 +467,31 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative; }
+  .top__img {
+    width: 100%;
     overflow: hidden; }
-    .top__image img {
+    .top__img img {
       width: 100%;
       height: auto; }
-    .top__image._animate {
+    .top__img._animate {
       -webkit-animation: disinfector 1s linear .2s forwards;
               animation: disinfector 1s linear .2s forwards; }
   .top__light {
-    width: 282px;
     height: 110vh;
     position: absolute;
     top: 50%;
-    left: 1%;
+    right: 190px;
     overflow: hidden;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
     .top__light._animate {
-      -webkit-animation: light 3s linear .8s forwards;
-              animation: light 3s linear .8s forwards; }
+      -webkit-animation: light 5s linear 0s forwards;
+              animation: light 5s linear 0s forwards; }
   .top__body {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto; }
-  @media (max-height: 500px) {
-    .top__image {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 27%;
-              flex: 0 0 27%; }
-    .top__light {
-      width: 250px;
-      left: 0%; } }
-  @media (max-width: 1100px) {
-    .top__light {
-      width: 240px;
-      left: -1%; } }
 
 .virus__image {
   position: absolute;
@@ -569,35 +559,35 @@ body {
     top: 69%;
     right: 18%; }
 .virus._animate .virus__image:first-child {
-  -webkit-animation: virus_1 5s linear .1s forwards;
-          animation: virus_1 5s linear .1s forwards; }
+  -webkit-animation: virus_1 6s linear .1s forwards;
+          animation: virus_1 6s linear .1s forwards; }
 .virus._animate .virus__image:nth-child(2) {
-  -webkit-animation: virus_1 5s linear forwards;
-          animation: virus_1 5s linear forwards; }
+  -webkit-animation: virus_1 6s linear forwards;
+          animation: virus_1 6s linear forwards; }
 .virus._animate .virus__image:nth-child(3) {
-  -webkit-animation: virus_2 5s linear .1s forwards;
-          animation: virus_2 5s linear .1s forwards; }
+  -webkit-animation: virus_2 6s linear .1s forwards;
+          animation: virus_2 6s linear .1s forwards; }
 .virus._animate .virus__image:nth-child(4) {
-  -webkit-animation: virus_2 5s linear forwards;
-          animation: virus_2 5s linear forwards; }
+  -webkit-animation: virus_2 6s linear forwards;
+          animation: virus_2 6s linear forwards; }
 .virus._animate .virus__image:nth-child(5) {
-  -webkit-animation: virus_2 5s linear .1s forwards;
-          animation: virus_2 5s linear .1s forwards; }
+  -webkit-animation: virus_2 6s linear .1s forwards;
+          animation: virus_2 6s linear .1s forwards; }
 .virus._animate .virus__image:nth-child(6) {
-  -webkit-animation: virus_2 5s linear forwards;
-          animation: virus_2 5s linear forwards; }
+  -webkit-animation: virus_2 6s linear forwards;
+          animation: virus_2 6s linear forwards; }
 .virus._animate .virus__image:nth-child(7) {
-  -webkit-animation: virus_1 4s linear 0.1s forwards;
-          animation: virus_1 4s linear 0.1s forwards; }
+  -webkit-animation: virus_1 6s linear 0.1s forwards;
+          animation: virus_1 6s linear 0.1s forwards; }
 .virus._animate .virus__image:nth-child(8) {
-  -webkit-animation: virus_2 5s linear forwards;
-          animation: virus_2 5s linear forwards; }
+  -webkit-animation: virus_2 6s linear forwards;
+          animation: virus_2 6s linear forwards; }
 .virus._animate .virus__image:nth-child(9) {
-  -webkit-animation: virus_2 5s linear .1s forwards;
-          animation: virus_2 5s linear .1s forwards; }
+  -webkit-animation: virus_2 6s linear .1s forwards;
+          animation: virus_2 6s linear .1s forwards; }
 .virus._animate .virus__image:nth-child(10) {
-  -webkit-animation: virus_2 5s linear forwards;
-          animation: virus_2 5s linear forwards; }
+  -webkit-animation: virus_2 6s linear forwards;
+          animation: virus_2 6s linear forwards; }
 @media (max-height: 900px) {
   .virus__image:nth-child(6) {
     width: 50px;
@@ -1074,18 +1064,30 @@ body {
             transform: rotate(-15deg); } }
 @-webkit-keyframes light {
   from {
-    background: url("../img/light.png") 75% 50%/0px 100% no-repeat; }
-  75% {
-    background: url("../img/light.png") 75% 50%/282px 100% no-repeat; }
+    width: 0px;
+    background: url("../img/light.png") 182px 50%/0 100% no-repeat; }
+  40% {
+    width: 282px;
+    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+  80% {
+    width: 282px;
+    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
   to {
-    background: url("../img/light.png") 75% 50%/0px 100% no-repeat; } }
+    width: 0;
+    background: url("../img/light.png") 182px 50%/0 100% no-repeat; } }
 @keyframes light {
   from {
-    background: url("../img/light.png") 75% 50%/0px 100% no-repeat; }
-  75% {
-    background: url("../img/light.png") 75% 50%/282px 100% no-repeat; }
+    width: 0px;
+    background: url("../img/light.png") 182px 50%/0 100% no-repeat; }
+  40% {
+    width: 282px;
+    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+  80% {
+    width: 282px;
+    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
   to {
-    background: url("../img/light.png") 75% 50%/0px 100% no-repeat; } }
+    width: 0;
+    background: url("../img/light.png") 182px 50%/0 100% no-repeat; } }
 @-webkit-keyframes virus_1 {
   from {
     -webkit-transform: translate(2px, 0);

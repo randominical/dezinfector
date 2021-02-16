@@ -446,11 +446,15 @@ body {
         height: 100%;
     }
     &__image {
-        flex: 0 0 34%;
+        flex: 0 0 380px;
         margin: 0 20px 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
+    }
+    &__img {
+        width: 100%;
         overflow: hidden;
         img {
             width: 100%;
@@ -461,15 +465,15 @@ body {
         }
     }
     &__light {
-        width: 282px;
+
         height: 110vh;
         position: absolute;
         top: 50%;
-        left: 1%;
+        right: 190px;
         overflow: hidden;
         transform: translate(0, -50%);
         &._animate {
-            animation: light 3s linear .8s forwards;
+            animation: light 5s linear 0s forwards;
         }
     }
     &__body {
@@ -477,17 +481,16 @@ body {
     }
     @media (max-height: 500px) {
         &__image {
-            flex: 0 0 27%;
+            //flex: 0 0 27%;
         }
         &__light {
-            width: 250px;
-            left: 0%;
+            //width: 250px;
+            //left: 0%;
         }
     }
     @media (max-width: 1100px) {
         &__light {
-            width: 240px;
-            left: -1%;
+            //left: 1%;
         }
     }
 }
@@ -570,34 +573,34 @@ body {
     &._animate {
         .virus__image {
             &:first-child {
-                animation: virus_1 5s linear .1s forwards;
+                animation: virus_1 6s linear .1s forwards;
             }
             &:nth-child(2) {
-                animation: virus_1 5s linear forwards;
+                animation: virus_1 6s linear forwards;
             }
             &:nth-child(3) {
-                animation: virus_2 5s linear .1s forwards;
+                animation: virus_2 6s linear .1s forwards;
             }
             &:nth-child(4) {
-                animation: virus_2 5s linear forwards;
+                animation: virus_2 6s linear forwards;
             }
             &:nth-child(5) {
-                animation: virus_2 5s linear .1s forwards;
+                animation: virus_2 6s linear .1s forwards;
             }
             &:nth-child(6) {
-                animation: virus_2 5s linear forwards;
+                animation: virus_2 6s linear forwards;
             }
             &:nth-child(7) {
-                animation: virus_1 4s linear.1s forwards;
+                animation: virus_1 6s linear.1s forwards;
             }
             &:nth-child(8) {
-                animation: virus_2 5s linear forwards;
+                animation: virus_2 6s linear forwards;
             }
             &:nth-child(9) {
-                animation: virus_2 5s linear .1s forwards;
+                animation: virus_2 6s linear .1s forwards;
             }
             &:nth-child(10) {
-                animation: virus_2 5s linear forwards;
+                animation: virus_2 6s linear forwards;
             }
         } 
     }
@@ -1137,13 +1140,20 @@ body {
 }
 @keyframes light {
     from {
-        background: url('../img/light.png') 75% 50% / 0px 100% no-repeat;
+        width: 0px;
+        background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
     }
-    75% {
-        background: url('../img/light.png') 75% 50% / 282px 100% no-repeat;
+    40% {
+        width: 282px;
+        background: url('../img/light.png') 182px 50% / 282px 100% no-repeat;
+    }
+    80% {
+        width: 282px;
+        background: url('../img/light.png') 182px 50% / 282px 100% no-repeat;
     }
     to {
-        background: url('../img/light.png') 75% 50% / 0px 100% no-repeat;
+        width: 0;
+        background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
     }
 }
 @keyframes virus_1 {

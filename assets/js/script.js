@@ -1,6 +1,6 @@
 //swiper
 let wrapper = document.querySelector('.wrapper');
-let image = document.querySelector('.top__image');
+let image = document.querySelector('.top__img');
 let light = document.querySelector('.top__light');
 let virus = document.querySelector('.virus');
 
