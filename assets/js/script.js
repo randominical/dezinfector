@@ -1,5 +1,8 @@
 //swiper
 let wrapper = document.querySelector('.wrapper');
+let image = document.querySelector('.top__image');
+let light = document.querySelector('.top__light');
+let virus = document.querySelector('.virus');
 
 let pageSlider = new Swiper('.page', {
     wrapperClass: "page__wrapper",
@@ -20,6 +23,14 @@ let pageSlider = new Swiper('.page', {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    on: {
+        init: function () {
+            wrapper.classList.add('_loaded');
+            image.classList.add('_animate');
+            light.classList.add('_animate');
+            virus.classList.add('_animate');
+        },
+    },
 });
 //form
 let form = document.querySelector('.form');

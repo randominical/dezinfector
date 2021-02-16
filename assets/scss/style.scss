@@ -55,6 +55,11 @@ body {
 }
 .wrapper {
     min-height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease 0s;
+}
+.wrapper._loaded {
+    opacity: 1;
 }
 .page {
     position: fixed;
@@ -415,7 +420,9 @@ body {
         img {
             width: 100%;
             height: auto;
-            animation: disinfector 1s linear 0s forwards;
+        }
+        &._animate {
+            animation: disinfector 1s linear .2s forwards;
         }
     }
     &__light {
@@ -426,7 +433,9 @@ body {
         left: 3%;
         overflow: hidden;
         transform: translate(0, -50%);
-        animation: light 5s linear .8s forwards;
+        &._animate {
+            animation: light 3s linear .8s forwards;
+        }
     }
     &__body {
         flex: 0 0 64%;
@@ -445,7 +454,6 @@ body {
             height: 48px;
             top: 5%;
             left: 3%;
-            animation: virus_1 5s linear .1s forwards;
         }
         &:nth-child(2) {
             width: 54px;
@@ -453,7 +461,6 @@ body {
             top: 68%;
             left: 8%;
             z-index: -1;
-            animation: virus_1 5s linear forwards;
         }
         &:nth-child(3) {
             width: 50px;
@@ -461,7 +468,6 @@ body {
             top: 30%;
             right: 0%;
             transform: rotate(45deg);
-            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(4) {
             width: 36px;
@@ -469,7 +475,6 @@ body {
             top: 94%;
             left: 20%;
             transform: rotate(90deg);
-            animation: virus_2 5s linear forwards;
         }
         &:nth-child(5) {
             width: 28px;
@@ -477,7 +482,6 @@ body {
             top: 6%;
             left: 38%;
             z-index: 3;
-            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(6) {
             width: 87px;
@@ -485,7 +489,6 @@ body {
             top: 95%;
             left: 57%;
             z-index: 3;
-            animation: virus_2 5s linear forwards;
         }
         &:nth-child(7) {
             width: 114px;
@@ -493,7 +496,6 @@ body {
             top: 42%;
             left: 18%;
             z-index: -1;
-            animation: virus_1 4s linear.1s forwards;
         }
         &:nth-child(8) {
             width: 47px;
@@ -501,22 +503,53 @@ body {
             top: 28%;
             left: 49%;
             z-index: -1;
-            animation: virus_2 5s linear forwards;
         }
         &:nth-child(9) {
             width: 20px;
             height: 20px;
             top: 2%;
             right: 12%;
-            animation: virus_2 5s linear .1s forwards;
         }
         &:nth-child(10) {
             width: 50px;
             height: 48px;
             top: 69%;
             right: 18%;
-            animation: virus_2 5s linear forwards;
         }
+    }
+    &._animate {
+        .virus__image {
+            &:first-child {
+                animation: virus_1 5s linear .1s forwards;
+            }
+            &:nth-child(2) {
+                animation: virus_1 5s linear forwards;
+            }
+            &:nth-child(3) {
+                animation: virus_2 5s linear .1s forwards;
+            }
+            &:nth-child(4) {
+                animation: virus_2 5s linear forwards;
+            }
+            &:nth-child(5) {
+                animation: virus_2 5s linear .1s forwards;
+            }
+            &:nth-child(6) {
+                animation: virus_2 5s linear forwards;
+            }
+            &:nth-child(7) {
+                animation: virus_1 4s linear.1s forwards;
+            }
+            &:nth-child(8) {
+                animation: virus_2 5s linear forwards;
+            }
+            &:nth-child(9) {
+                animation: virus_2 5s linear .1s forwards;
+            }
+            &:nth-child(10) {
+                animation: virus_2 5s linear forwards;
+            }
+        } 
     }
     @media (max-height: 900px) {
         &__image {
@@ -970,7 +1003,7 @@ body {
     from {
         background: url('../img/light.png') 75% 50% / 0px 100% no-repeat;
     }
-    70% {
+    75% {
         background: url('../img/light.png') 75% 50% / 282px 100% no-repeat;
     }
     to {
