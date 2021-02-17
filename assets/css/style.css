@@ -51,8 +51,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
-  z-index: 2; }
+  overflow: hidden; }
   @media (max-width: 768px), (max-height: 475px) {
     .page {
       position: static;
@@ -84,6 +83,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative; }
+  @media (max-width: 768px), (max-height: 475px) {
+    .section {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; } }
 
 .container {
   width: 100%;
@@ -98,8 +102,7 @@ body {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 2; }
+          justify-content: center; }
 
 .title-section {
   font-weight: bold;
@@ -249,7 +252,13 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 1; }
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear; }
+  .footer.active {
+    opacity: 1;
+    z-index: 1; }
   .footer__body {
     width: 100%;
     max-width: 1230px;
@@ -319,6 +328,9 @@ body {
       .footer__email, .footer__address, .footer__documents, .footer__policy, .footer__personal {
         font-size: 12px;
         line-height: 14px; } }
+  @media (max-width: 768px), (max-height: 475px) {
+    .footer {
+      position: static; } }
 
 .pink {
   color: #FC2763; }
@@ -542,7 +554,7 @@ body {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 230px;
               flex: 0 0 230px; } }
-  @media (max-width: 7760px) {
+  @media (max-width: 760px) {
     .top__image {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 180px;

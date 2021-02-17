@@ -68,7 +68,6 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    z-index: 2;
     @media (max-width: 768px), (max-height: 475px) {
         position: static;
         height: auto;
@@ -91,6 +90,7 @@ body {
     justify-content: center;
     position: relative;
     @media (max-width: 768px), (max-height: 475px) {
+        flex: 0 0 auto;
     }
 }
 .container {
@@ -101,7 +101,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
 }
 //==================================================
 .title-section {
@@ -239,7 +238,13 @@ body {
     position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s linear;
+    &.active {
+        opacity: 1;
+        z-index: 1;
+    }
     &__body {
         width: 100%;
         max-width: 1230px;
@@ -304,6 +309,9 @@ body {
             font-size: 12px;
             line-height: 14px;
         }
+    }
+    @media (max-width: 768px), (max-height: 475px) {
+        position: static;
     }
 }
 .pink {
@@ -524,7 +532,7 @@ body {
             flex: 0 0 230px;
         }
     }
-    @media (max-width: 7760px) {
+    @media (max-width: 760px) {
         &__image {
             flex: 0 0 180px;
         }

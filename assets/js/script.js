@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 //swiper
+
+let topSlide = document.querySelector('.top');
+let footer = document.querySelector('.footer');
+
+function footerHide() {
+    if (topSlide.classList.contains('swiper-slide-active')) {
+        footer.classList.remove('active');
+    }
+    else {
+        footer.classList.add('active');
+    }
+};
+
 let swiper = Swiper;
 let init = false;
 
@@ -43,6 +56,17 @@ function swiperMode() {
                 observer: true,
                 observeParents: true,
                 observeSlideChildren: true,
+                on: {
+                    init: function () {
+                        footerHide()
+                    },
+                    transitionStart: function () {
+                        footerHide()
+                    },
+                    resize: function () {
+                        footerHide()
+                    }
+                },
             });
         }
     }
@@ -58,9 +82,11 @@ function swiperMode() {
 
 window.addEventListener('load', function() {
     swiperMode();
+    footerHide();
 });
 window.addEventListener('resize', function() {
     swiperMode();
+    footerHide();
 });
 
 //form
