@@ -68,6 +68,7 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
+    z-index: 2;
 }
 .page__wrapper {
     display: flex;
@@ -204,9 +205,10 @@ body {
     width: 100%;
     background: #DAE2ED;
     padding: 60px 0 24px 0;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 1;
     &__body {
         width: 100%;
         max-width: 1230px;
@@ -431,10 +433,12 @@ body {
 }
 //==================================================
 .top {
+    background: #F3F6FA;
     padding: 30px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;position: relative;
+    //z-index: 0;
     .container {
         position: relative;
     }

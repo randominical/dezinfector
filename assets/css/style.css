@@ -51,7 +51,8 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 2; }
 
 .page__wrapper {
   display: -webkit-box;
@@ -207,9 +208,10 @@ body {
   width: 100%;
   background: #DAE2ED;
   padding: 60px 0 24px 0;
-  position: absolute;
+  position: fixed;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  z-index: 1; }
   .footer__body {
     width: 100%;
     max-width: 1230px;
@@ -435,6 +437,7 @@ body {
       height: 40px; } }
 
 .top {
+  background: #F3F6FA;
   padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -444,7 +447,8 @@ body {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative; }
   .top .container {
     position: relative; }
   .top__virus {
