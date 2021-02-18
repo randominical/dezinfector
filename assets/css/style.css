@@ -102,6 +102,11 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .container_mob {
+    display: none; }
+  @media (max-width: 768px) {
+    .container_mob {
+      display: block; } }
 
 .title-section {
   font-weight: bold;
@@ -226,6 +231,7 @@ body {
   @media (max-width: 768px) {
     .btn {
       height: 70px;
+      width: 100%;
       position: static; }
       .btn_buy {
         margin: 0 0 10px 0; }
@@ -489,6 +495,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -792,13 +802,21 @@ body {
 @media (max-width: 790px) {
   .body-top__title {
     font-size: 30px;
-    line-height: 35px; }
+    line-height: 35px;
+    margin: 0 0 30px 0; }
     .body-top__title span {
       font-size: 40px;
-      line-height: 48px;
-      margin: 0 0 30px 0; }
+      line-height: 48px; }
   .body-top__discount {
+    display: block;
     border: none; } }
+@media (max-width: 768px) {
+  .body-top__title {
+    margin: 45px 0 30px 0; }
+  .body-top__call {
+    position: absolute;
+    top: 0;
+    left: 220px; } }
 
 .discount__price {
   -webkit-box-flex: 0;
@@ -850,15 +868,15 @@ body {
   .discount__now {
     padding: 10px 0 10px 10px; } }
 @media (max-width: 790px) {
-  .discount__price {
-    display: none; }
   .discount__now {
     font-size: 15px;
     line-height: 18px;
     padding: 10px 0;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
-            flex: 0 0 100%; } }
+            flex: 0 0 100%; }
+  .discount__price:after {
+    display: none; } }
 
 .price__value {
   margin: 0 20px 0 0; }
@@ -869,6 +887,9 @@ body {
   .price__text {
     font-size: 14px;
     line-height: 16px; } }
+@media (max-width: 790px) {
+  .price__text {
+    display: none; } }
 
 .value-price__old {
   margin: 0 0 5px 0; }

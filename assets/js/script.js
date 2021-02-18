@@ -107,3 +107,78 @@ formClose.onclick = function() {
 formCover.onclick = function() {
     form.classList.remove('active');
 };
+
+
+
+const parent_original = document.querySelector('.body-top');
+const parent_original2 = document.querySelector('.body-top__discount');
+const parent = document.querySelector('.container_mob');
+const item1 = document.querySelector('.body-top__list');
+const item2 = document.querySelector('.body-top__number');
+const item3 = document.querySelector('.discount__now');
+
+//Слушаем изменение размера экрана
+window.addEventListener('resize', move1);
+
+//Функция
+function move1(){
+	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if (viewport_width <= 768) {
+		if (!item1.classList.contains('done')) {
+			parent.insertBefore(item1, parent.children[1]);
+			item1.classList.add('done');
+		}
+	} else {
+		if (item1.classList.contains('done')) {
+			parent_original.insertBefore(item1, parent_original.children[1]);
+			item1.classList.remove('done');
+		}
+	}
+}
+
+//Вызываем функцию
+move1();
+
+//Слушаем изменение размера экрана
+window.addEventListener('resize', move2);
+
+//Функция
+function move2(){
+	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if (viewport_width <= 768) {
+		if (!item2.classList.contains('done')) {
+			parent.insertBefore(item2, parent.children[2]);
+			item2.classList.add('done');
+		}
+	} else {
+		if (item2.classList.contains('done')) {
+			parent_original.insertBefore(item2, parent_original.children[3]);
+			item2.classList.remove('done');
+		}
+	}
+}
+
+//Вызываем функцию
+move2();
+
+//Слушаем изменение размера экрана
+window.addEventListener('resize', move3);
+
+//Функция
+function move3(){
+	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+	if (viewport_width <= 768) {
+		if (!item3.classList.contains('done')) {
+			parent.insertBefore(item3, parent.children[3]);
+			item3.classList.add('done');
+		}
+	} else {
+		if (item3.classList.contains('done')) {
+			parent_original2.insertBefore(item3, parent_original2.children[2]);
+			item3.classList.remove('done');
+		}
+	}
+}
+
+//Вызываем функцию
+move3();

@@ -100,6 +100,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &_mob {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        &_mob {
+            display: block;
+        }
+    }
 }
 //==================================================
 .title-section {
@@ -209,6 +217,7 @@ body {
     }
     @media (max-width: 768px) {
         height: 70px;
+        width: 100%;
         position: static;
         &_buy {
             margin: 0 0 10px 0;
@@ -474,6 +483,7 @@ body {
 .top {
     padding: 30px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     .container {
@@ -803,14 +813,25 @@ body {
         &__title {
             font-size: 30px;
             line-height: 35px;
+            margin: 0 0 30px 0;
             span {
                 font-size: 40px;
                 line-height: 48px;
-                margin: 0 0 30px 0;
             }
         }
         &__discount {
+            display: block;
             border: none;
+        }
+    }
+    @media (max-width: 768px) {
+        &__title {
+            margin: 45px 0 30px 0;
+        }
+        &__call {
+            position: absolute;
+            top: 0;
+            left: 220px;
         }
     }
 }
@@ -862,14 +883,16 @@ body {
         }
     }
     @media (max-width: 790px) {
-        &__price {
-            display: none;
-        }
         &__now {
             font-size: 15px;
             line-height: 18px;
             padding: 10px 0;
             flex: 0 0 100%;
+        }
+        &__price {
+            &:after {
+                display: none;
+            }
         }
     }
 }
@@ -885,6 +908,11 @@ body {
         &__text {
             font-size: 14px;
             line-height: 16px;
+        }
+    }
+    @media (max-width: 790px) {
+        &__text {
+            display: none;
         }
     }
 }
