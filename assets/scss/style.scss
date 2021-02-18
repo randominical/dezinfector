@@ -100,7 +100,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 //==================================================
 .title-section {
@@ -312,6 +312,8 @@ body {
     }
     @media (max-width: 768px), (max-height: 475px) {
         position: static;
+        opacity: 1;
+        z-index: 1;
     }
 }
 .pink {
@@ -486,7 +488,7 @@ body {
         height: 100%;
     }
     &__image {
-        flex: 0 0 380px;
+        flex: 0 0 350px;
         margin: 0 20px 0 0;
         display: flex;
         align-items: center;
@@ -505,7 +507,8 @@ body {
         }
     }
     &__light {
-        height: 110vh;
+        height: 140%;
+        min-height: 110vh;
         position: absolute;
         top: 50%;
         right: 190px;
@@ -518,13 +521,24 @@ body {
     &__body {
         flex: 0 1 auto;
     }
-    @media (max-height: 500px) {
+    @media (max-height: 900px) {
         &__image {
-            flex: 0 0 290px;
+            flex: 0 0 250px;
         }
         &__light {
-            right: 150px;
+            right: 130px;
         }
+    }
+    @media (max-height: 500px) {
+        &__image {
+            flex: 0 0 200px;
+        }
+        &__light {
+            right: 110px;
+        }
+    }
+    @media (max-height: 475px) {
+        padding: 30px 0 70px 0;
     }
     @media (max-width: 980px) {
         &__image {
@@ -988,6 +1002,9 @@ body {
             row-gap: 7px;
         }
     }
+    @media (max-height: 475px) {
+        padding: 30px 0 70px 0;
+    }
 }
 .content-disinfect {
     &__item {
@@ -1092,6 +1109,9 @@ body {
         &__body {
             row-gap: 10px;
         }
+    }
+    @media (max-height: 475px) {
+        padding: 30px 0 70px 0;
     }
 }
 .body-specifications {
@@ -1230,6 +1250,24 @@ body {
     to {
         width: 0;
         background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
+    }
+}
+@keyframes light-mob {
+    from {
+        width: 0px;
+        background: url('../img/light-mob.png') 182px 50% / 0 100% no-repeat;
+    }
+    40% {
+        width: 282px;
+        background: url('../img/light-mob.png') 182px 50% / 282px auto no-repeat;
+    }
+    80% {
+        width: 282px;
+        background: url('../img/light-mob.png') 182px 50% / 282px auto no-repeat;
+    }
+    to {
+        width: 0;
+        background: url('../img/light-mob.png') 182px 50% / 0 100% no-repeat;
     }
 }
 @keyframes virus_1 {
