@@ -1,3 +1,8 @@
+let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+let widthN = window.matchMedia('(min-width: 769px)');
+let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
+let heightN = window.matchMedia('(min-height: 476px)');
+
 //анимация
 let wrapper = document.querySelector('.wrapper');
 let image = document.querySelector('.top__img');
@@ -6,9 +11,13 @@ let virus = document.querySelector('.virus');
 
 document.addEventListener('DOMContentLoaded', function(){
     wrapper.classList.add('_loaded');
-    image.classList.add('_animate');
     light.classList.add('_animate');
     virus.classList.add('_animate');
+    if (widthN.matches) {
+        image.classList.add('_animate');
+    } else if (widthS.matches) {
+        image.classList.remove('_animate');
+    }
 });
 
 //swiper
@@ -26,10 +35,6 @@ function footerHide() {
 
 let swiper = Swiper;
 let init = false;
-let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
-let widthN = window.matchMedia('(min-width: 769px)');
-let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
-let heightN = window.matchMedia('(min-height: 476px)');
 
 function swiperMode() {
 
