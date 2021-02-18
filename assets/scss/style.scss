@@ -628,6 +628,7 @@ body {
         }
     }
     &._animate {
+        animation: virus-cover 6.2s linear 0s forwards;
         .virus__image {
             &:first-child {
                 animation: virus_1 6s linear .1s forwards;
@@ -734,7 +735,17 @@ body {
     &__call {
         z-index: 1;
     }
-    @media (max-height: 900px), (max-width: 1000px) {
+    @media (max-width: 1160px) {
+        &__bottom {
+            flex-direction: column;
+        }
+        &__buttons {
+            flex: 0 0 auto;
+            margin: 0 0 15px 0;
+        }
+
+    }
+    @media (max-height: 900px), (max-width: 1100px) {
         &__title {
             font-size: 36px;
             line-height: 42px;
@@ -777,15 +788,6 @@ body {
                 font-size: 18px;
                 line-height: 20px;
             }
-        }
-    }
-    @media (max-width: 1135px) {
-        &__buttons {
-            flex: 0 0 450px;
-            margin: 0 0 15px 0;
-        }
-        &__call {
-            display: none;
         }
     }
     @media (max-width: 790px) {
@@ -1392,5 +1394,16 @@ body {
     to {
         transform: translate(1000px, 0);
         opacity: 0;
+    }
+}
+@keyframes virus-cover {
+    from {
+        z-index: 1;
+    }
+    99% {
+        z-index: 1;
+    }
+    to {
+        z-index: -1;
     }
 }
