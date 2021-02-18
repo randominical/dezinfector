@@ -554,7 +554,6 @@ body {
     position: absolute;
     top: 50%;
     right: 190px;
-    overflow: hidden;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     z-index: -1; }
@@ -600,9 +599,10 @@ body {
         height: 520px;
         margin: 0 35px 0 0; }
       .top__img {
-        background: url("../img/dezinfector-mob.png") center bottom/100% auto no-repeat;
-        -webkit-animation: none !important;
-                animation: none !important; }
+        background: url("../img/dezinfector-mob.png") center bottom/100% auto no-repeat; }
+        .top__img._animate {
+          -webkit-animation: none !important;
+                  animation: none !important; }
       .top__light {
         right: 45px; } }
   @media (max-width: 460px) {
@@ -1246,29 +1246,29 @@ body {
 @-webkit-keyframes light {
   from {
     width: 0px;
-    background: url("../img/light.png") 182px 50%/0 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/0 100% repeat-y; }
   40% {
     width: 282px;
-    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/282px 100% repeat-y; }
   80% {
     width: 282px;
-    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/282px 100% repeat-y; }
   to {
     width: 0;
-    background: url("../img/light.png") 182px 50%/0 100% no-repeat; } }
+    background: url("../img/light.png") 182px 50%/0 100% repeat-y; } }
 @keyframes light {
   from {
     width: 0px;
-    background: url("../img/light.png") 182px 50%/0 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/0 100% repeat-y; }
   40% {
     width: 282px;
-    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/282px 100% repeat-y; }
   80% {
     width: 282px;
-    background: url("../img/light.png") 182px 50%/282px 100% no-repeat; }
+    background: url("../img/light.png") 182px 50%/282px 100% repeat-y; }
   to {
     width: 0;
-    background: url("../img/light.png") 182px 50%/0 100% no-repeat; } }
+    background: url("../img/light.png") 182px 50%/0 100% repeat-y; } }
 @-webkit-keyframes virus_1 {
   from {
     -webkit-transform: translate(2px, 0);

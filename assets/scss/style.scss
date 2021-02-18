@@ -542,7 +542,6 @@ body {
         position: absolute;
         top: 50%;
         right: 190px;
-        overflow: hidden;
         transform: translate(0, -50%);
         z-index: -1;
         &._animate {
@@ -589,7 +588,9 @@ body {
         }
         &__img {
             background: url('../img/dezinfector-mob.png') center bottom / 100% auto no-repeat;
-            animation: none !important;
+            &._animate {
+                animation: none !important;
+            }
         }
         &__light {
             right: 45px;
@@ -1333,19 +1334,19 @@ body {
 @keyframes light {
     from {
         width: 0px;
-        background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
+        background: url('../img/light.png') 182px 50% / 0 100% repeat-y;
     }
     40% {
         width: 282px;
-        background: url('../img/light.png') 182px 50% / 282px 100% no-repeat;
+        background: url('../img/light.png') 182px 50% / 282px 100% repeat-y;
     }
     80% {
         width: 282px;
-        background: url('../img/light.png') 182px 50% / 282px 100% no-repeat;
+        background: url('../img/light.png') 182px 50% / 282px 100% repeat-y;
     }
     to {
         width: 0;
-        background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
+        background: url('../img/light.png') 182px 50% / 0 100% repeat-y;
     }
 }
 @keyframes virus_1 {
