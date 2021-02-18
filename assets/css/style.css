@@ -55,7 +55,6 @@ body {
   @media (max-width: 768px), (max-height: 475px) {
     .page {
       position: static;
-      height: auto;
       min-height: 100%; } }
 
 .page__wrapper {
@@ -66,8 +65,7 @@ body {
   height: 100%; }
   @media (max-width: 768px), (max-height: 475px) {
     .page__wrapper {
-      display: block;
-      height: auto; } }
+      display: block; } }
 
 .section {
   -webkit-box-flex: 1;
@@ -106,7 +104,8 @@ body {
     display: none; }
   @media (max-width: 768px) {
     .container_mob {
-      display: block; } }
+      display: block;
+      margin-top: 50px; } }
 
 .title-section {
   font-weight: bold;
@@ -173,6 +172,27 @@ body {
       width: 30px;
       height: 30px;
       font-size: 20px; } }
+  @media (max-width: 768px) {
+    .number {
+      padding: 0;
+      margin: 0 0 30px 0; }
+      .number span {
+        width: 70px;
+        height: 70px;
+        font-size: 48px;
+        margin: 0 30px 0 0; }
+      .number p {
+        font-size: 15px;
+        line-height: 18px; } }
+  @media (max-width: 460px) {
+    .number span {
+      width: 35px;
+      height: 35px;
+      font-size: 22px;
+      margin: 0 10px 0 0; }
+    .number p {
+      font-size: 14px;
+      line-height: 16px; } }
 
 .buttons {
   border: 2px solid #FC2763;
@@ -517,44 +537,37 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 350px;
             flex: 0 0 350px;
+    height: 100%;
     margin: 0 20px 0 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative; }
+    position: relative;
+    z-index: 2; }
   .top__img {
     width: 100%;
-    overflow: hidden; }
-    .top__img img {
-      width: 100%;
-      height: auto; }
+    height: 100%;
+    background: url("../img/dezinfector.png") center/100% auto no-repeat; }
     .top__img._animate {
       -webkit-animation: disinfector 1s linear .2s forwards;
               animation: disinfector 1s linear .2s forwards; }
   .top__light {
     height: 140%;
-    min-height: 110vh;
+    min-height: 200vh;
     position: absolute;
     top: 50%;
     right: 190px;
     overflow: hidden;
     -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%); }
+            transform: translate(0, -50%);
+    z-index: -1; }
     .top__light._animate {
       -webkit-animation: light 5s linear 0s forwards;
               animation: light 5s linear 0s forwards; }
   .top__body {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-            flex: 0 1 auto; }
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%; }
   @media (max-height: 900px) {
     .top__image {
+      height: 500px;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 250px;
               flex: 0 0 250px; }
@@ -578,10 +591,23 @@ body {
     .top__light {
       right: 120px; } }
   @media (max-width: 768px) {
+    .top {
+      padding: 20px 0 70px 0; }
+      .top__image {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 125px;
+                flex: 0 0 125px;
+        height: 520px;
+        margin: 0 35px 0 0; }
+      .top__img {
+        background: url("../img/dezinfector-mob.png") center bottom/100% auto no-repeat;
+        -webkit-animation: none !important;
+                animation: none !important; }
+      .top__light {
+        right: 45px; } }
+  @media (max-width: 460px) {
     .top__image {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 0 180px;
-              flex: 0 0 180px; } }
+      display: none; } }
 
 .virus__image {
   position: absolute;
@@ -812,11 +838,23 @@ body {
     border: none; } }
 @media (max-width: 768px) {
   .body-top__title {
-    margin: 45px 0 30px 0; }
+    margin: 40px 0 30px 0; }
   .body-top__call {
     position: absolute;
     top: 0;
-    left: 220px; } }
+    left: 180px;
+    font-size: 18px;
+    line-height: 21px; } }
+@media (max-width: 460px) {
+  .body-top__title {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 30px 0 20px 0; }
+    .body-top__title span {
+      font-size: 30px;
+      line-height: 38px; }
+  .body-top__call {
+    left: 20px; } }
 
 .discount__price {
   -webkit-box-flex: 0;
@@ -877,6 +915,10 @@ body {
             flex: 0 0 100%; }
   .discount__price:after {
     display: none; } }
+@media (max-width: 768px) {
+  .discount__price {
+    padding: 0;
+    margin: 0 0 30px 0; } }
 
 .price__value {
   margin: 0 20px 0 0; }
@@ -1227,32 +1269,6 @@ body {
   to {
     width: 0;
     background: url("../img/light.png") 182px 50%/0 100% no-repeat; } }
-@-webkit-keyframes light-mob {
-  from {
-    width: 0px;
-    background: url("../img/light-mob.png") 182px 50%/0 100% no-repeat; }
-  40% {
-    width: 282px;
-    background: url("../img/light-mob.png") 182px 50%/282px auto no-repeat; }
-  80% {
-    width: 282px;
-    background: url("../img/light-mob.png") 182px 50%/282px auto no-repeat; }
-  to {
-    width: 0;
-    background: url("../img/light-mob.png") 182px 50%/0 100% no-repeat; } }
-@keyframes light-mob {
-  from {
-    width: 0px;
-    background: url("../img/light-mob.png") 182px 50%/0 100% no-repeat; }
-  40% {
-    width: 282px;
-    background: url("../img/light-mob.png") 182px 50%/282px auto no-repeat; }
-  80% {
-    width: 282px;
-    background: url("../img/light-mob.png") 182px 50%/282px auto no-repeat; }
-  to {
-    width: 0;
-    background: url("../img/light-mob.png") 182px 50%/0 100% no-repeat; } }
 @-webkit-keyframes virus_1 {
   from {
     -webkit-transform: translate(2px, 0);

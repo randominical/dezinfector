@@ -70,7 +70,6 @@ body {
     overflow: hidden;
     @media (max-width: 768px), (max-height: 475px) {
         position: static;
-        height: auto;
         min-height: 100%;
     }
 }
@@ -80,7 +79,6 @@ body {
     height: 100%;
     @media (max-width: 768px), (max-height: 475px) {
         display: block;
-        height: auto;
     }
 }
 .section {
@@ -106,6 +104,7 @@ body {
     @media (max-width: 768px) {
         &_mob {
             display: block;
+            margin-top: 50px;
         }
     }
 }
@@ -165,6 +164,32 @@ body {
             width: 30px;
             height: 30px;
             font-size: 20px;
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 0;
+        margin: 0 0 30px 0;
+        span {
+            width: 70px;
+            height: 70px;
+            font-size: 48px;
+            margin: 0 30px 0 0;
+        }
+        p {
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+    @media (max-width: 460px) {
+        span {
+            width: 35px;
+            height: 35px;
+            font-size: 22px;
+            margin: 0 10px 0 0;
+        }
+        p {
+            font-size: 14px;
+            line-height: 16px;
         }
     }
 }
@@ -498,40 +523,38 @@ body {
     }
     &__image {
         flex: 0 0 350px;
+        height: 100%;
         margin: 0 20px 0 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         position: relative;
+        z-index: 2;
     }
     &__img {
         width: 100%;
-        overflow: hidden;
-        img {
-            width: 100%;
-            height: auto;
-        }
+        height: 100%;
+        background: url('../img/dezinfector.png') center / 100% auto no-repeat;
         &._animate {
             animation: disinfector 1s linear .2s forwards;
         }
     }
     &__light {
         height: 140%;
-        min-height: 110vh;
+        min-height: 200vh;
         position: absolute;
         top: 50%;
         right: 190px;
         overflow: hidden;
         transform: translate(0, -50%);
+        z-index: -1;
         &._animate {
             animation: light 5s linear 0s forwards;
         }
     }
     &__body {
-        flex: 0 1 auto;
+        flex: 0 1 100%;
     }
     @media (max-height: 900px) {
         &__image {
+            height: 500px;
             flex: 0 0 250px;
         }
         &__light {
@@ -558,11 +581,23 @@ body {
         }
     }
     @media (max-width: 768px) {
+        padding: 20px 0 70px 0;
         &__image {
-            flex: 0 0 180px;
+            flex: 0 0 125px;
+            height: 520px;
+            margin: 0 35px 0 0;
+        }
+        &__img {
+            background: url('../img/dezinfector-mob.png') center bottom / 100% auto no-repeat;
+            animation: none !important;
         }
         &__light {
-            //right: 110px;
+            right: 45px;
+        }
+    }
+    @media (max-width: 460px) {
+        &__image {
+            display: none;
         }
     }
 }
@@ -826,12 +861,28 @@ body {
     }
     @media (max-width: 768px) {
         &__title {
-            margin: 45px 0 30px 0;
+            margin: 40px 0 30px 0;
         }
         &__call {
             position: absolute;
             top: 0;
-            left: 220px;
+            left: 180px;
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    @media (max-width: 460px) {
+        &__title {
+            font-size: 20px;
+            line-height: 25px;
+            margin: 30px 0 20px 0;
+            span {
+                font-size: 30px;
+                line-height: 38px;
+            }
+        }
+        &__call {
+            left: 20px;
         }
     }
 }
@@ -893,6 +944,12 @@ body {
             &:after {
                 display: none;
             }
+        }
+    }
+    @media (max-width: 768px) {
+        &__price {
+            padding: 0;
+            margin: 0 0 30px 0;
         }
     }
 }
@@ -1289,24 +1346,6 @@ body {
     to {
         width: 0;
         background: url('../img/light.png') 182px 50% / 0 100% no-repeat;
-    }
-}
-@keyframes light-mob {
-    from {
-        width: 0px;
-        background: url('../img/light-mob.png') 182px 50% / 0 100% no-repeat;
-    }
-    40% {
-        width: 282px;
-        background: url('../img/light-mob.png') 182px 50% / 282px auto no-repeat;
-    }
-    80% {
-        width: 282px;
-        background: url('../img/light-mob.png') 182px 50% / 282px auto no-repeat;
-    }
-    to {
-        width: 0;
-        background: url('../img/light-mob.png') 182px 50% / 0 100% no-repeat;
     }
 }
 @keyframes virus_1 {

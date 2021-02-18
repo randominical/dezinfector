@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 //swiper
-
 let topSlide = document.querySelector('.top');
 let footer = document.querySelector('.footer');
 
@@ -27,12 +26,12 @@ function footerHide() {
 
 let swiper = Swiper;
 let init = false;
+let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+let widthN = window.matchMedia('(min-width: 769px)');
+let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
+let heightN = window.matchMedia('(min-height: 476px)');
 
 function swiperMode() {
-    let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
-    let widthN = window.matchMedia('(min-width: 769px)');
-    let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
-    let heightN = window.matchMedia('(min-height: 476px)');
 
     if(widthN.matches & heightN.matches) {
         if (!init) {
@@ -49,7 +48,6 @@ function swiperMode() {
                 },
                 mousewheel: {
                     sensitivity: 1,
-                    eventsTarget: '.section'
                 },
                 watchOverflow: true,
                 speed: 800,
@@ -108,8 +106,7 @@ formCover.onclick = function() {
     form.classList.remove('active');
 };
 
-
-
+//динамический адаптив
 const parent_original = document.querySelector('.body-top');
 const parent_original2 = document.querySelector('.body-top__discount');
 const parent = document.querySelector('.container_mob');
@@ -117,13 +114,8 @@ const item1 = document.querySelector('.body-top__list');
 const item2 = document.querySelector('.body-top__number');
 const item3 = document.querySelector('.discount__now');
 
-//Слушаем изменение размера экрана
-window.addEventListener('resize', move1);
-
-//Функция
 function move1(){
-	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (viewport_width <= 768) {
+	if (widthS.matches) {
 		if (!item1.classList.contains('done')) {
 			parent.insertBefore(item1, parent.children[1]);
 			item1.classList.add('done');
@@ -136,16 +128,8 @@ function move1(){
 	}
 }
 
-//Вызываем функцию
-move1();
-
-//Слушаем изменение размера экрана
-window.addEventListener('resize', move2);
-
-//Функция
 function move2(){
-	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (viewport_width <= 768) {
+	if (widthS.matches) {
 		if (!item2.classList.contains('done')) {
 			parent.insertBefore(item2, parent.children[2]);
 			item2.classList.add('done');
@@ -158,16 +142,8 @@ function move2(){
 	}
 }
 
-//Вызываем функцию
-move2();
-
-//Слушаем изменение размера экрана
-window.addEventListener('resize', move3);
-
-//Функция
 function move3(){
-	const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-	if (viewport_width <= 768) {
+	if (widthS.matches) {
 		if (!item3.classList.contains('done')) {
 			parent.insertBefore(item3, parent.children[3]);
 			item3.classList.add('done');
@@ -180,5 +156,12 @@ function move3(){
 	}
 }
 
-//Вызываем функцию
+move1();
+move2();
 move3();
+
+window.addEventListener('resize', function() {
+    move1();
+    move2();
+    move3();
+});
