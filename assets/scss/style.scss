@@ -56,10 +56,9 @@ body {
 .wrapper {
     min-height: 100%;
     opacity: 0;
-    transition: opacity .3s linear 0s;
-}
-.wrapper._loaded {
-    opacity: 1;
+    &._loaded{
+        animation: wrapper .5s linear 0.2s forwards;
+    }
 }
 .page {
     position: fixed;
@@ -520,6 +519,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 1;
     }
     &__image {
         flex: 0 0 350px;
@@ -535,7 +535,7 @@ body {
         align-items: center;
         justify-content: center;
         &._animate {
-            animation: disinfector 1s linear .2s forwards;
+            animation: disinfector 1s linear .3s forwards;
         }
         img {
             width: 100%;
@@ -554,7 +554,7 @@ body {
         transform: translate(0, -50%);
         z-index: -1;
         &._animate {
-            animation: light 5s linear 0s forwards;
+            animation: light 5s linear .4s forwards;
         }
     }
     &__body {
@@ -692,37 +692,37 @@ body {
         }
     }
     &._animate {
-        animation: virus-cover 6.2s linear 0s forwards;
+        animation: virus-cover 6.2s linear 0.3s forwards;
         .virus__image {
             &:first-child {
-                animation: virus_1 6s linear .1s forwards;
+                animation: virus_1 6s linear .4s forwards;
             }
             &:nth-child(2) {
-                animation: virus_1 6s linear forwards;
+                animation: virus_1 6s linear .3s forwards;
             }
             &:nth-child(3) {
-                animation: virus_2 6s linear .1s forwards;
+                animation: virus_2 6s linear .4s forwards;
             }
             &:nth-child(4) {
-                animation: virus_2 6s linear forwards;
+                animation: virus_2 6s linear .3s forwards;
             }
             &:nth-child(5) {
-                animation: virus_2 6s linear .1s forwards;
+                animation: virus_2 6s linear .4s forwards;
             }
             &:nth-child(6) {
-                animation: virus_2 6s linear forwards;
+                animation: virus_2 6s linear .3s forwards;
             }
             &:nth-child(7) {
-                animation: virus_1 6s linear.1s forwards;
+                animation: virus_1 6s linear.4s forwards;
             }
             &:nth-child(8) {
-                animation: virus_2 6s linear forwards;
+                animation: virus_2 6s linear .3s forwards;
             }
             &:nth-child(9) {
-                animation: virus_2 6s linear .1s forwards;
+                animation: virus_2 6s linear .4s forwards;
             }
             &:nth-child(10) {
-                animation: virus_2 6s linear forwards;
+                animation: virus_2 6s linear .3s forwards;
             }
         } 
     }
@@ -1336,6 +1336,14 @@ body {
     }
 }
 //==================================================
+@keyframes wrapper {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 @keyframes disinfector {
     from {
         transform: rotate(0deg);

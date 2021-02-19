@@ -4,7 +4,7 @@ let image = document.querySelector('.top__img_d');
 let light = document.querySelector('.top__light');
 let virus = document.querySelector('.virus');
 
-document.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('load', function(){
     wrapper.classList.add('_loaded');
     light.classList.add('_animate');
     virus.classList.add('_animate');
