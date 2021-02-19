@@ -1,11 +1,6 @@
-let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
-let widthN = window.matchMedia('(min-width: 769px)');
-let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
-let heightN = window.matchMedia('(min-height: 476px)');
-
 //анимация
 let wrapper = document.querySelector('.wrapper');
-let image = document.querySelector('.top__img');
+let image = document.querySelector('.top__img_d');
 let light = document.querySelector('.top__light');
 let virus = document.querySelector('.virus');
 
@@ -13,11 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
     wrapper.classList.add('_loaded');
     light.classList.add('_animate');
     virus.classList.add('_animate');
-    if (widthN.matches) {
-        image.classList.add('_animate');
-    } else if (widthS.matches) {
-        image.classList.remove('_animate');
-    }
+    image.classList.add('_animate');
 });
 
 //swiper
@@ -33,12 +24,17 @@ function footerHide() {
     }
 };
 
+let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
+let widthN = window.matchMedia('(min-width: 769px)');
+let heightS = window.matchMedia('(min-height: 0px) and (max-height: 475px)');
+let heightN = window.matchMedia('(min-height: 476px)');
+
 let swiper = Swiper;
 let init = false;
 
 function swiperMode() {
 
-    if(widthN.matches & heightN.matches) {
+    if(widthN.matches && heightN.matches) {
         if (!init) {
             init = true;
             swiper = new Swiper('.page', {

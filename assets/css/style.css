@@ -544,10 +544,23 @@ body {
   .top__img {
     width: 100%;
     height: 100%;
-    background: url("../img/dezinfector.png") center/100% auto no-repeat; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .top__img._animate {
       -webkit-animation: disinfector 1s linear .2s forwards;
               animation: disinfector 1s linear .2s forwards; }
+    .top__img img {
+      width: 100%;
+      height: auto; }
+    .top__img_mob {
+      display: none; }
   .top__light {
     height: 140%;
     min-height: 200vh;
@@ -566,7 +579,6 @@ body {
             flex: 0 1 100%; }
   @media (max-height: 900px) {
     .top__image {
-      height: 500px;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 250px;
               flex: 0 0 250px; }
@@ -593,16 +605,19 @@ body {
     .top {
       padding: 20px 0 70px 0; }
       .top__image {
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
         -webkit-box-flex: 0;
             -ms-flex: 0 0 125px;
                 flex: 0 0 125px;
-        height: 520px;
         margin: 0 35px 0 0; }
-      .top__img {
-        background: url("../img/dezinfector-mob.png") center bottom/100% auto no-repeat; }
-        .top__img._animate {
-          -webkit-animation: none !important;
-                  animation: none !important; }
+      .top__img_d {
+        display: none; }
+      .top__img_mob {
+        display: block; }
       .top__light {
         right: 45px; } }
   @media (max-width: 460px) {
