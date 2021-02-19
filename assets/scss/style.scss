@@ -56,7 +56,7 @@ body {
 .wrapper {
     min-height: 100%;
     opacity: 0;
-    transition: opacity 2s ease 0s;
+    transition: all 3s ease 0s;
 }
 .wrapper._loaded {
     opacity: 1;
@@ -597,7 +597,9 @@ body {
         }
         &__img {
             &_d {
-                display: none;
+                position: absolute;
+                opacity: 0;
+                z-index: -1;
             }
             &_mob {
                 display: block;

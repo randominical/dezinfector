@@ -39,8 +39,8 @@ body {
 .wrapper {
   min-height: 100%;
   opacity: 0;
-  -webkit-transition: opacity 2s ease 0s;
-  transition: opacity 2s ease 0s; }
+  -webkit-transition: all 3s ease 0s;
+  transition: all 3s ease 0s; }
 
 .wrapper._loaded {
   opacity: 1; }
@@ -615,7 +615,9 @@ body {
                 flex: 0 0 125px;
         margin: 0 35px 0 0; }
       .top__img_d {
-        display: none; }
+        position: absolute;
+        opacity: 0;
+        z-index: -1; }
       .top__img_mob {
         display: block; }
       .top__light {
