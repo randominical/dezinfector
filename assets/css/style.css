@@ -39,8 +39,8 @@ body {
 .wrapper {
   min-height: 100%;
   opacity: 0;
-  -webkit-transition: all 3s ease 0s;
-  transition: all 3s ease 0s; }
+  -webkit-transition: opacity .3s linear 0s;
+  transition: opacity .3s linear 0s; }
 
 .wrapper._loaded {
   opacity: 1; }
@@ -955,7 +955,8 @@ body {
   .value-price__old span {
     font-size: 16px;
     padding: 0;
-    position: relative; }
+    position: relative;
+    z-index: 0; }
     .value-price__old span::after {
       content: '';
       width: 105%;
@@ -965,8 +966,7 @@ body {
       top: 5px;
       left: 0;
       -webkit-transform: rotate(15deg);
-              transform: rotate(15deg);
-      z-index: 1; }
+              transform: rotate(15deg); }
 .value-price__new {
   font-weight: 300;
   font-size: 15px;
