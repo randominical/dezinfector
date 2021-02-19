@@ -290,6 +290,7 @@ body {
     }
     &__number {
         flex: 0 0 auto;
+        padding: 0;
     }
     &__buttons {
         margin: 0 20px 0 20px;
@@ -331,7 +332,7 @@ body {
     @media (max-height: 900px) {
         padding: 15px 0 18px 0;
         &__body {
-            grid-template-rows: 50px 17px;
+            grid-template-rows: minmax(50px, auto) minmax(17px, auto);
             row-gap: 12px;
         }
         &__email, &__address, &__documents, &__policy, &__personal {
@@ -349,6 +350,23 @@ body {
             flex: 0 0 450px;
             width: 450px;
             margin: 0 10px 0 10px;
+        }
+    }
+    @media (max-width: 910px) {
+        &__body {
+            display: block;
+        }
+        &__row {
+            flex-direction: column;
+            align-items: flex-start;
+            &:first-child {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+        &__buttons {
+            flex: 0 0 70px;
         }
     }
     @media (max-width: 768px), (max-height: 500px) {
