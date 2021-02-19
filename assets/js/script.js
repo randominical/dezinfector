@@ -56,15 +56,9 @@ function swiperMode() {
                 observeParents: true,
                 observeSlideChildren: true,
                 on: {
-                    init: function () {
-                        footerHide()
-                    },
                     transitionStart: function () {
                         footerHide()
                     },
-                    resize: function () {
-                        footerHide()
-                    }
                 },
             });
         }
