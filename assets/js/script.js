@@ -107,10 +107,16 @@ formCover.onclick = function() {
 //динамический адаптив
 const parent_original = document.querySelector('.body-top');
 const parent_original2 = document.querySelector('.body-top__discount');
-const parent = document.querySelector('.container_mob');
+const parent_original3 = document.querySelector('.specifications__body');
+const parent_original4 = document.querySelector('.specifications__illustration');
+const parent = document.querySelector('.container_mob-1');
+const parent2 = document.querySelector('.container_mob-2');
+const parent3 = document.querySelector('.container_mob-3');
 const item1 = document.querySelector('.body-top__list');
 const item2 = document.querySelector('.body-top__number');
 const item3 = document.querySelector('.discount__now');
+const item4 = document.querySelector('.body-specifications__title');
+const item5 = document.querySelector('.illustration__comment');
 
 function move1(){
 	if (widthS.matches) {
@@ -154,12 +160,46 @@ function move3(){
 	}
 }
 
-move1();
-move2();
-move3();
+function move4(){
+	if (widthS.matches) {
+		if (!item4.classList.contains('done')) {
+			parent2.insertBefore(item4, parent2.children[1]);
+			item4.classList.add('done');
+		}
+	} else {
+		if (item4.classList.contains('done')) {
+			parent_original3.insertBefore(item4, parent_original3.children[0]);
+			item4.classList.remove('done');
+		}
+	}
+}
+
+function move5(){
+	if (widthS.matches) {
+		if (!item5.classList.contains('done')) {
+			parent3.insertBefore(item5, parent3.children[1]);
+			item5.classList.add('done');
+		}
+	} else {
+		if (item5.classList.contains('done')) {
+			parent_original4.insertBefore(item5, parent_original4.children[2]);
+			item5.classList.remove('done');
+		}
+	}
+}
+
+window.addEventListener('load', function() {
+    move1();
+    move2();
+    move3();
+    move4();
+    move5();
+});
 
 window.addEventListener('resize', function() {
     move1();
     move2();
     move3();
+    move4();
+    move5();
 });
