@@ -14,8 +14,8 @@ window.addEventListener('load', function(){
 //swiper
 let widthS = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
 let widthN = window.matchMedia('(min-width: 769px)');
-let heightS = window.matchMedia('(min-height: 0px) and (max-height: 500px)');
-let heightN = window.matchMedia('(min-height: 501px)');
+let heightS = window.matchMedia('(min-height: 0px) and (max-height: 5710px)');
+let heightN = window.matchMedia('(min-height: 571px)');
 
 let swiper = undefined;
 let init = false;
