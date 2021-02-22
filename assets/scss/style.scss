@@ -329,6 +329,7 @@ body {
     }
     &__policy, &__personal {
         position: relative;
+        white-space: nowrap;
         &:before {
             content: '';
             height: 1px;
@@ -391,6 +392,23 @@ body {
         position: static;
         opacity: 1;
         z-index: 1;
+        &__row {
+            &:first-child {
+                grid-template-columns: 1fr;
+                justify-items: center;
+            }
+            &:last-child {
+                align-items: center;
+            }
+        }
+        &__buttons {
+            margin: 0 0 10px 0;
+        }
+    }
+    @media (max-width: 700px) {
+        &__buttons {
+            width: 100%;
+        }
     }
 }
 .pink {
@@ -1339,7 +1357,7 @@ body {
         }
     }
     @media (max-width: 768px), (max-height: 570px) {
-        padding: 30px 0 90px 0;
+        padding: 50px 0 90px 0;
         .container {
             align-items: flex-start;
         }
