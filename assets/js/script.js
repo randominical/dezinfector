@@ -89,19 +89,23 @@ window.addEventListener('resize', function() {
 let form = document.querySelector('.form');
 let formCover = document.querySelector('.form__cover');
 let formClose = document.querySelector('.form__exit');
+let body = document.querySelector('body');
 const formOpeners = document.querySelectorAll(".btn_buy");
 
 for (const formOpener of formOpeners) {
     formOpener.addEventListener('click', function(event) {
         form.classList.add('active');
+        body.classList.add('lock');
   })
 };
 
 formClose.onclick = function() {
     form.classList.remove('active');
+    body.classList.remove('lock');
 };
 formCover.onclick = function() {
     form.classList.remove('active');
+    body.classList.remove('lock');
 };
 
 //динамический адаптив
